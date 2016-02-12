@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+  </head>
+  <body>
+    <h1>All Articles</h1>
+
+    <ul id="articles">
+      <% @articles.each do |article| %>
+       <li>
+         <!-- <%= article.title %> -->
+         <%= link_to article.title, article_path(article.id), class: 'article_title' %>
+       </li>
+      <% end %>
+    </ul>
+
+  </body>
+</html>
